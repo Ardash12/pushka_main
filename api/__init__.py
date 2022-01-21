@@ -15,6 +15,10 @@ dictConfig(LogConfig().dict())
 logger = logging.getLogger("pushka")
 
 from api import routes
+from .db import engine
+from . import models
+
+models.Base.metadata.create_all(bind=engine)
 
 # Add router in app
 app.include_router(routes.router)
