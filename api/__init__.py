@@ -10,20 +10,25 @@ settings = settings.Config_settings()
 # initial app
 app = FastAPI()
 
+
+
 # initial logger
 dictConfig(LogConfig().dict())
 logger = logging.getLogger("pushka")
 
-from api.routes import api_routes
+from api.routes import api_routes, click_stat_routes
 from api.utils.mergin_rec_files import merging_files
-from .db import engine, tarantool_db
+from .db import engine, tarantool_db, SessionLocal
 from . import models
 from .tarantool_loader import check_creating_spaces
+from starlette.requests import Request
+from starlette.responses import Response
 
 models.Base.metadata.create_all(bind=engine)
 
 # Add router in app
-app.include_router(api_routes.router)
+app.include_router(api_routes.router, prefix='/api/v1', tags=["api"])
+app.include_router(click_stat_routes.router, prefix='/click_stat', tags=["click_stat"])
 
 
 # Список файлов с региональными рекомендациями
@@ -57,3 +62,14 @@ merging_files(regional_rec_files)
 # Проверка инициализации спейса для каждой рекомендации. Если его нет, то создаем в Тарантуле
 
 check_creating_spaces(spaces)
+
+
+@app.middleware('http')
+async def db_session_middleware(request: Request, call_next):
+    response = Response('Internet server error', status_code=500)
+    try:
+        request.state.db = SessionLocal()
+        response = await call_next(request)
+    finally:
+        request.state.db.close()
+    return response

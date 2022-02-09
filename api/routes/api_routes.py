@@ -9,9 +9,7 @@ from api.schemas import GetRecommendations
 import time
 
 # initial router for api routes - '/api/v1'
-router = APIRouter(
-    prefix='/api/v1',
-    tags=["api"])
+router = APIRouter()
 
 
 def get_postgres_db():
