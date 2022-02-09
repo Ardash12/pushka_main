@@ -21,8 +21,10 @@ class LogConfig(BaseModel):
     handlers = {
         "default": {
             "formatter": "default",
-            "class": "logging.FileHandler",
-            'filename': 'debug.log',
+            # "class": "logging.FileHandler",
+            # 'filename': 'debug.log',
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stderr",
         },
     }
     loggers = {

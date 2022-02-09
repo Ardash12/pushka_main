@@ -22,8 +22,7 @@ else:
         postgres_host=settings.postgres_host,
         postgres_db=settings.postgres_db
     )
-    tarantool_db = tarantool.connect(host=settings.tarantool_host, port=settings.tarantool_port,
-                                     user=settings.tarantool_user, password=settings.tarantool_password)
+    tarantool_db = tarantool.connect(host=settings.tarantool_host, port=settings.tarantool_port, user=settings.tarantool_user, password=settings.tarantool_password)
 
 engine = create_engine(POSTGRES_DATABASE_URL)
 
