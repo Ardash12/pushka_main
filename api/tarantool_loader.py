@@ -34,7 +34,7 @@ class RecommendationSpace():
         """Создание спейса"""
 
         logger.info(f'Create {self.space_name} space')
-        self.db.call('box.cfg', [{'memtx_memory': 25769803778 }])
+        self.db.call('box.cfg', [{'memtx_memory': 38654705667 }])
         schema = [
             {'name': 'id', 'type': 'string'},
             {'name': 'event_ids', 'type': 'any'}
