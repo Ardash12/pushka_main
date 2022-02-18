@@ -3,6 +3,8 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    color: #1D1D1D;
+    font-style: normal;
 }
 
 body * {
@@ -15,21 +17,22 @@ body * {
 
 h1 {
     text-align: center;
-    color: #fd1509;
     padding-top: 30px;
+    font-size: 20px;
 }
 
 .events {
-    background: linear-gradient(45deg, rgb(170, 250, 246), rgb(147, 250, 143));
-    text-align: center;
-    width: 80%;
+    /*background: linear-gradient(45deg, rgb(170, 250, 246), rgb(147, 250, 143));*/
+    background-color: #F3F7FC;
+    border-radius: 15px;
+    width: 90%;
     margin: 0 auto;
 }
 
 h2 {
-    color: #0C2975;
+    color: #1049A7;
     text-align: center;
-    font-weight: bold;
+    font-size: 18px;
     padding: 20px;
     margin: 0;
 }
@@ -44,17 +47,61 @@ h2 {
 }
 
 .cell {
-    width: 150px;
-    align-items: left;
-    height: 100px;
+    width: 170px;
+    height: 200px;
     margin: 15px;
-    background-color: #fffad0;
+    border-radius: 15px;
 }
 
-p {
-    padding: 10px;
-    color: rgb(56, 6, 88);
-    font-style: italic;
+.bigcell {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 15px;
+}
+
+.pin {
+    width: 53px;
+    height: 60px;
+    position: relative;
+    border-radius: 15px;
+    top: -81px;
+    left: 117px;
+    cursor: pointer;
+}
+
+.corner {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 15px;
+    /*z-index: 2;*/
+}
+
+.black_corner {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 15px;
+}
+
+.date {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+    position: relative;
+    top: -32px;
+    left: 12px;
+}
+
+.poster {
+    font-size: 12px;
+    margin: 0;
+    padding-top: 7px;
+    color: #000000;
+    padding-left: 5px;
 }
 
 .pagedown {
@@ -63,8 +110,10 @@ p {
 }
 
 .events2 {
-    background: linear-gradient(45deg, rgba(179, 113, 199, 0.3), rgb(245, 161, 203));
-    width: 80%;
+    /*background: linear-gradient(45deg, rgba(179, 113, 199, 0.3), rgb(245, 161, 203));*/
+    background-color: #F3F7FC;
+    border-radius: 15px;
+    width: 90%;
     margin: 0 auto;
 }
 
