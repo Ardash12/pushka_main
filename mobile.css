@@ -34,7 +34,20 @@
         height: 130px;
     }
 
+    .date {
+        font-size: 14px;
+        top: -28px;
+        left: 6px;
+    }
+
     .pin {
         left: 77px;
-    }    
+    } 
+    
+    .poster {
+        margin: 0;
+        padding-top: 7px;
+        padding-left: 3px;
+        text-align: center;
+    }
 }
