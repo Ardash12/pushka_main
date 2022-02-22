@@ -1,14 +1,19 @@
 from pydantic import BaseModel
 from datetime import datetime
+from typing import Optional
 
 
-class GetRecommendations(BaseModel):
-    event_id: int
-    score: float
+class EventInfoSchema(BaseModel):
+    id: int
     event_title: str
-    event_organizer: str
+    score: float
+    event_organizer_id: int
+    event_organizer_title: str
+    organization: Optional[object]
+    organization_data: Optional[object]
+    event_img: str
     event_buy_link: str
-    event_buy_link_additional: str
+    event_additional_buy_link: str
 
 
 
