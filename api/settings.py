@@ -15,6 +15,15 @@ class Config_settings(BaseSettings):
     tarantool_user: str
     tarantool_password: str
 
+    # Host, Ports params
+    prod_host: str
+    prod_port: int
+    test_host: str
+    test_port: int
+    dev_host: str
+    dev_port: int
+    status: str
+
     # Test params
     is_test: bool
     postgres_db_test: str

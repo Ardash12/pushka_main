@@ -29,7 +29,6 @@ def get_taranrool_db():
 async def get_recommendations(id: str = None, type: str = None, db: Session = Depends(get_taranrool_db)):
     try:
         return crud.get_recommendations_by_id(db, id, type)
-        # return "aa"
     except:
         raise HTTPException(status_code=400, detail="Bad request. Recommendations were not found")
 

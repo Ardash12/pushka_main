@@ -11,7 +11,7 @@ db = SessionLocal()
 def table_exists(engine, name):
     ins = inspect(engine)
     ret = ins.dialect.has_table(engine.connect(), name)
-    print('Table "{}" exists: {}'.format(name, ret))
+    logger.info('Table "{}" exists: {}'.format(name, ret))
     return ret
 
 

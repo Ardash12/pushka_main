@@ -47,8 +47,8 @@ regional_rec_files = [
 # Список спейсов Тарантула для каждого типа рекомендаций, а также исходных файлов.
 
 spaces = [
-    # ['regional_rec','regional_rec.json'],
-    # ['3day_recs_from_filtered_events', '3day_recs_from_filtered_events_final.json'],
+    ['regional_rec','regional_rec.json'],
+    ['3day_recs_from_filtered_events', '3day_recs_from_filtered_events_final.json'],
     ['3day_recs_from_filtered_top', '3day_recs_from_filtered_top_final.json'],
     ['user_rec_without_filter', 'User_rec_without_filter_final.json'],
 ]
