@@ -3,8 +3,11 @@ anyio==3.5.0
 asgiref==3.4.1
 atomicwrites==1.4.0
 attrs==21.4.0
+certifi==2021.10.8
+charset-normalizer==2.0.12
 click==8.0.3
 colorama==0.4.4
+decorator==5.1.1
 fastapi==0.72.0
 greenlet==1.1.2
 h11==0.12.0
@@ -18,6 +21,7 @@ numpy==1.22.2
 packaging==21.3
 pandas==1.4.0
 pluggy==1.0.0
+psycopg2-binary==2.9.3
 psycopg2==2.9.3
 py==1.11.0
 pydantic==1.9.0
@@ -26,6 +30,8 @@ pytest==6.2.5
 python-dateutil==2.8.2
 python-dotenv==0.19.2
 pytz==2021.3
+requests==2.27.1
+self==2020.12.3
 six==1.16.0
 sniffio==1.2.0
 SQLAlchemy==1.4.29
@@ -33,4 +39,5 @@ starlette==0.17.1
 tarantool==0.7.1
 toml==0.10.2
 typing-extensions==4.0.1
+urllib3==1.26.8
 uvicorn==0.17.0
