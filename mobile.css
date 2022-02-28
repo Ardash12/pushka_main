@@ -1,53 +1,21 @@
 @media (max-width: 550px) and (min-width:320px){
-
+    
     .table {
-        grid-template-columns: repeat(2,0fr);
-        grid-template-rows: repeat(5,0fr);
+        grid-template-columns: repeat(1,0fr);
+        grid-template-rows: repeat(8,0fr);
         justify-content: center;
         align-items: center;
     }
 
-    .tablebottom {
-        grid-template-columns: repeat(2,0fr);
-        grid-template-rows: repeat(5,0fr);
-        justify-content: center;
-        align-items: center;
+    .title {
+        width: 285px;
     }
 
-    .cell {
-        width: 130px;
-        height: 160px;
+    h1 {
+        text-align: left;
     }
 
-    .bigcell {
-        width: 130px;
-        height: 130px;
-    }  
-    
-    .corner {
-        width: 130px;
-        height: 130px;
-    }
-    
-    .black_corner {
-        width: 130px;
-        height: 130px;
-    }
-
-    .date {
-        font-size: 14px;
-        top: -28px;
-        left: 6px;
-    }
-
-    .pin {
-        left: 77px;
-    } 
-    
-    .poster {
-        margin: 0;
-        padding-top: 7px;
-        padding-left: 3px;
-        text-align: center;
+    h2 {
+        text-align: left;
     }
 }
