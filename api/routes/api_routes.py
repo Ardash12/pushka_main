@@ -28,8 +28,9 @@ def get_taranrool_db():
 @router.get("/recommendations_by_id", response_model=List[EventInfoSchema])
 async def get_recommendations(id: str = None, type: str = None, db: Session = Depends(get_taranrool_db)):
     try:
-        return crud.get_recommendations_by_id(db, id, type)
-    except:
+        response = await crud.get_recommendations_by_id(db, id, type)
+        return response
+    except Exception as e:
         raise HTTPException(status_code=400, detail="Bad request. Recommendations were not found")
 
 
@@ -37,6 +38,7 @@ async def get_recommendations(id: str = None, type: str = None, db: Session = De
 @router.get("/recommendations_by_phone", response_model=List[EventInfoSchema])
 async def get_recommendations_by_phone(phone: str = None, type: str = None, db: Session = Depends(get_taranrool_db)):
     try:
-        return crud.get_recommendations_by_phone(db, phone, type)
-    except:
+        response = await crud.get_recommendations_by_phone(db, phone, type)
+        return response
+    except Exception as e:
         raise HTTPException(status_code=400, detail="Bad request. Recommendations were not found")
