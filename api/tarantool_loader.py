@@ -124,7 +124,7 @@ class RecommendationSpace():
                                 'event_img': ''
                             }
                             item_data.append(event)
-
+                    print(key)
                     connect.insert((key, item_data))
                     current_count += 1
                     logger.info(f'added recs for {current_count} of {count_of_user} users ')
@@ -184,6 +184,7 @@ class RecommendationSpace():
                     # если выпадает NoneType
                     except TypeError:
                         pass
+                    print(key)
                     connect.insert((key, item_data))
                     current_count += 1
                     logger.info(f'added recs for {current_count} of {count_of_user} users ')
