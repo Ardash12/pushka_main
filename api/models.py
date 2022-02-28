@@ -15,7 +15,7 @@ class Reference(Base):
 
     __tablename__ = 'reference_stat'
     id = Column(Integer, primary_key=True, index=True, unique=True)
-    user_id = Column(Integer)
+    user_id = Column(String)
     event_id = Column(Integer)
     event_type = Column(String)
     date = Column(DateTime)
