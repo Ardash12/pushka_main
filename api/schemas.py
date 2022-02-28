@@ -20,7 +20,7 @@ class EventInfoSchema(BaseModel):
 class ReferenceBase(BaseModel):
     """Базовая схема построения данных для обращения к БД"""
 
-    user_id: int
+    user_id: str
     event_id: int
     event_type: str
     date: datetime
